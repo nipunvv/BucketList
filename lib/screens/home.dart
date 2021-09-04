@@ -1,4 +1,5 @@
 import 'package:bucket_list/constants.dart';
+import 'package:bucket_list/screens/add_task.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -17,6 +18,17 @@ class Home extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           color: secondaryColor,
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => AddTask(),
+            ),
+          );
+        },
+        child: Icon(Icons.add),
       ),
     );
   }
